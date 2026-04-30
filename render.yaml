@@ -1,0 +1,9 @@
+services:
+  - type: worker
+    name: discord-event-bot
+    runtime: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
+    envVars:
+      - key: WEBHOOK_URL
+        sync: false
